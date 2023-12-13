@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tellimused</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg cvet1">
+    <div class="container-fluid">
+        <img class="navbar-brand mx-auto" src="https://sun9-64.userapi.com/impg/f1rDv_9zQRyXSHuAmyAzexGZk0pOe8bJHlWRcQ/ouWhPUy6dQ0.jpg?size=716x126&quality=96&sign=f950c8824b2d88b8584d9ccca1cf9b47&type=album" height="70px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <div class="d-flex">
+                 <a href="link_to_profile" class="btn knopka" style="background-color: #BD52E3">
+        <i class="bi bi-person"></i>
+        </a>
+        <a href="link_to_search" class="btn knopka" id="searchButton" style="background-color: #BD52E3">
+        <i class="bi bi-search"></i>
+        </a>
+        <button class="btn knopka" id="infoButton" style="background-color: #BD52E3">
+        <i class="bi bi-list"></i>
+        </button>
+</div>
+            <div class="dropdown-menu dropdown-menu-end" id="infoMenu" aria-labelledby="infoButton">
+            <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Tooded</a>
+                <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-temaatikad/">Lisa toode</a>
+            <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Tellimused</a>
+                <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Kasutajad</a>
+                <a class="dropdown-item" href="https://prikoljuha.github.io/ITI0105-2023-kassi-kost-mid/">Statistika</a>
+</div>
+            </div>
+            <div class="dropdown-menu dropdown-menu-end" id="menuContent" aria-labelledby="searchButton">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Leia sobiv toode" aria-label="Search">
+                    <button class="btn knopka" type="submit" style="background-color: #E6BBF6">
+                        Otsi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<script>
+    const searchButton = document.getElementById("searchButton");
+const menuContent = document.getElementById("menuContent");
+const searchInput = document.querySelector('form[role="search"] input');
+const searchButtonInMenu = document.querySelector('form[role="search"] button');
+
+searchButton.addEventListener("click", function (e) {
+    e.stopPropagation();
+    menuContent.style.display = menuContent.style.display === "none" ? "block" : "none";
+});
+
+searchInput.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+searchButtonInMenu.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+document.addEventListener("click", function () {
+    menuContent.style.display = "none";
+});
+
+const infoButton = document.getElementById("infoButton");
+const infoMenu = document.getElementById("infoMenu");
+
+infoButton.addEventListener("click", function (e) {
+  e.stopPropagation();
+  infoMenu.style.display = infoMenu.style.display === "none" ? "block" : "none";
+});
+
+document.addEventListener("click", function () {
+  infoMenu.style.display = "none";
+});
+</script>
+</body>
+<div><h2>Tellimuste Loend</h2></div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tellimuse number</th>
+                <th>Kuupäev</th>
+                <th>Summa</th>
+                <th>Tellitud Toode</th>
+                <th>Tellija, aadress</th>
+                <th>Staatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>20.01.2023</td>
+                <td>50€</td>
+                <td>"Dinosaur Costume", "Paabulind"</td>
+                <td>Vasja Pupkin, Kooli tee 38-1</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>22.01.2023</td>
+                <td>30€</td>
+                <td>"Teddy Karu", "Roosa parukas"</td>
+                <td>Kati Tamm, Põdra tee 138-35</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>3</td>
+                <td>01.02.2023</td>
+                <td>20€</td>
+                <td>"Lammas"</td>
+                <td>Monika Maasikas, Kaase pst 56-9</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>4</td>
+                <td>03.02.2023</td>
+                <td>65€</td>
+                <td>"Superman", "Minnie Mouse", "Printsess Leia"</td>
+                <td>Ivan Ivanov, Odra pst 256-96</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>5</td>
+                <td>05.02.2023</td>
+                <td>35€</td>
+                <td>"Scooby-Doo"</td>
+                <td>Ursula Pirn, Hirvi tee 5-98</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>6</td>
+                <td>11.02.2023</td>
+                <td>75€</td>
+                <td>"Printsess Leia", "Jack Skellington", "Jõuluvana"</td>
+                <td>Anna Apelsin, Kaase pst 56-9</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>7</td>
+                <td>14.02.2023</td>
+                <td>90€</td>
+                <td>"Frankenpup", "Teddy Karu"</td>
+                <td>Karina Roos, Jänese tee 35-49</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>8</td>
+                <td>20.02.2023</td>
+                <td>55€</td>
+                <td>"Nunn", "Minion Bob"</td>
+                <td>Nikita Penisti, Lamba pst 46-17</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>9</td>
+                <td>06.03.2023</td>
+                <td>85€</td>
+                <td>"Mootorsaag", "Lumememm"</td>
+                <td>Monika Maasikas, Kaase pst 56-9</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>10</td>
+                <td>08.03.2023</td>
+                <td>25€</td>
+                <td>"Ärikass", "Minnie Mouse"</td>
+                <td>Jelena Smirnova, Ehitajate tee 90-1</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>11</td>
+                <td>15.03.2023</td>
+                <td>160€</td>
+                <td>"Pipparkook", "Kuri kloun", "Ämblik"</td>
+                <td>John Smith, Porgandi tee 76-83</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        <tr>
+                <td>12</td>
+                <td>20.03.2023</td>
+                <td>20€</td>
+                <td>"Hirv"</td>
+                <td>Umer Pipkin, Koera pst 86b-4</td>
+                <td class="order-status">Töödeldud</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+</html>
