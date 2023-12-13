@@ -150,3 +150,18 @@ body {
         .h1{
             margin-left: 20px;
         }
+@media (max-width: 768px) {
+            table {
+            width: 40%;
+            border-collapse: collapse;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+            th, td {
+            border: 1px solid #cb99dd;
+            text-align: left;
+            padding: 8px;
+            font-size: 10px;
+        }
+        }
